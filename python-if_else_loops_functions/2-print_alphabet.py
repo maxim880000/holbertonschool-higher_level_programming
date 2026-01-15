@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-def add(a, b):
-    """Adds two integers and returns the result.
 
-    Args:
-        a: First integer.
-        b: Second integer.
-
-    Returns:
-        The sum of a and b.
-    """
-    return a + b
+# Boucle de i = 97 (a) à 122 (z)
+for i in range(97, 123):
+    # On ignore les lettres e (101) et q (113)
+    if i != 101 and i != 113:
+        # On affiche le caractère correspondant à i sans saut de ligne
+        print("{}".format(chr(i)), end="")
