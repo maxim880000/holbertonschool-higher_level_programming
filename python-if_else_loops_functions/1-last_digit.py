@@ -8,7 +8,7 @@ number = random.randint(-10000, 10000)
 last_digit = number % 10
 
 # On corrige pour avoir le vrai dernier chiffre avec le signe
-if number < 0 and last_digit != 0:
+if number < 0:
     last_digit = -last_digit   # -626 → on veut -6 et pas 4
 
 # Affichage de la phrase de base
