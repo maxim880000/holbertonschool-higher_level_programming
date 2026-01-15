@@ -1,27 +1,30 @@
 #!/usr/bin/python3
+# Import random générer des nombres aléatoires
 import random
-# random number display his last digit
-# Génère un nombre aléatoire
+
+# Génère un nombre aléatoire compris entre -10000 et 10000
 number = random.randint(-10000, 10000)
 
-# % 10 donne le dernier chiffre
-last_digit = number % 10
+# On récupère le dernier chiffre du nombre
+# abs(number) permet d'éviter les problèmes avec les nombres négatifs
+last_digit = abs(number) % 10
 
-# On corrige pour avoir le vrai dernier chiffre avec le signe
+# Si le nombre est négatif,dernier chiffre doit aussi être négatif
+# ex-123 -> = -3
 if number < 0:
-    last_digit = -last_digit   # -626 → on veut -6 et pas 4
+    last_digit = -last_digit
 
-# Affichage de la phrase de base
+# Affiche le nombre et son dernier chiffre
+# end=" " permet de continuer l'affichage sur la même ligne
 print(f"Last digit of {number} is {last_digit}", end=" ")
 
-# différentes conditions demandées
 if last_digit > 5:
     print("and is greater than 5")
 
 elif last_digit == 0:
     print("and is 0")
 
+# - le dernier chiffre est inférieur à 6
+# - et il n’est pas égal à 0
 else:
-    # Ici on a soit :
-    #    1,2,3,4,5 ou -1,-2,-3,-4,-5
     print("and is less than 6 and not 0")
