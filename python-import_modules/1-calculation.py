@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Importe les fonctions nécessaires depuis le fichier calculator_1.py
+# Importe les fonctions nécessaires depuis le fichier
 from calculator_1 import add, sub, mul, div
 
 # Vérifie que le fichier est exécuté directement
