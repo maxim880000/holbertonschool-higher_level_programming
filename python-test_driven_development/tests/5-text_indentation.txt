@@ -1,0 +1,16 @@
+===========================
+Testing text_indentation
+===========================
+
+Normal cases
+------------
+
+>>> text_indentation("Bonjour. Comment ça va?")
+Bonjour.
+ 
+Comment ça va?
+
+>>> text_indentation("Test: encore un test.")
+Test:
+
+encore un test.
