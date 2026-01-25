@@ -4,7 +4,7 @@ def print_last_digit(number):
 
     # abs pour les nb negatifs
     last_digit = abs(number) % 10
-    # afficher le dernier chiffre sans saut de ligne
+    # afficher le dernier chiffre
     print("{}".format(last_digit), end="")
 
     return last_digit

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 number = 98
-# f for
-# evaluate what we ahve in {} and replace by his value
+# f for string
 print(f"{number} Battery street")

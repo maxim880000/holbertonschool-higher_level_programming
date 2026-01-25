@@ -4,5 +4,5 @@
 for i in range(97, 123):
     # On ignore les lettres e (101) et q (113)
     if i != 101 and i != 113:
-        # On affiche le caractère correspondant à i sans saut de ligne
+        # On affiche le caractère correspondant à i
         print("{}".format(chr(i)), end="")

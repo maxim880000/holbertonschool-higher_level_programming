@@ -21,5 +21,4 @@ def best_score(a_dictionary):
             best_value = value  # On met à jour la meilleure valeur
             best_key = key      # On met à jour la clé associée
 
-    # On retourne la clé avec le meilleur score
     return best_key

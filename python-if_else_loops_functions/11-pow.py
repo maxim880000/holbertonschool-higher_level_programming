@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Fonction qui calcule a élevé à la puissance b et retourne le résultat
+# Fonction qui calcule a puissance de b
 def pow(a, b):
-    # Calcule a puissance b en utilisant l'opérateur **
+    # Calcule a puissance b*
     return a ** b

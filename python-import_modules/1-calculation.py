@@ -5,10 +5,9 @@ from calculator_1 import add, sub, mul, div
 # Vérifie que le fichier est exécuté directement
 # et non importé dans un autre script
 if __name__ == "__main__":
-    # Déclaration de la première variable
+    
     a = 10
 
-    # Déclaration de la deuxième variable
     b = 5
 
     # Affiche le résultat de l'addition

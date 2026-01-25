@@ -1,4 +1,4 @@
-#!/usr/bin/python3  # indique que le fichier doit être exécuté avec python3
+#!/usr/bin/python3
 # fonction qui convertit un chiffre romain en entier
 def roman_to_int(roman_string):
     # vérifie que l'entrée est bien une chaîne

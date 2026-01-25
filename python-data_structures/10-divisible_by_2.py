@@ -5,7 +5,8 @@ def divisible_by_2(my_list=[]):
     result = []
     # Parcourt chaque nombre de la liste
     for num in my_list:
-        # Vérifie si le nombre est divisible par 2 et ajoute True ou False
+        # Vérifie si le nombre est divisible par 2
+        # true or false est ajouté en fin de list
         result.append(num % 2 == 0)
     # Retourne la liste de résultats
     return result

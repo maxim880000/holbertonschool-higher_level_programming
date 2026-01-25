@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import random
-# On importe le module random pour pouvoir générer des nombres aléatoires
+# import random (generates nb)
+# .randint generate nb between a and b
 number = random.randint(-10, 10)
 
 if number > 0:

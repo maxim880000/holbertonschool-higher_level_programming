@@ -4,15 +4,15 @@ from sys import argv
 
 if __name__ == "__main__":
     argc = len(argv) - 1
-    # On calcule le nombre réel d’arguments (sans le nom du script)
+    # On calcule le nombre d’arguments (sans le nom du script)
 
     # Affichage de la première ligne selon le nombre d’arguments
     if argc == 0:
-        print("0 arguments.")  # Pas d’arguments 1
+        print("0 arguments.")
     elif argc == 1:
-        print("1 argument:")  # Un argument +2
+        print("1 argument:")
     else:
-        print(f"{argc} arguments:")  # Plusieurs arguments +2
+        print(f"{argc} arguments:")
 
     # Boucle pour afficher chaque argument avec son numéro
     for i in range(1, len(argv)):  # On commence à 1 pass le nom du script

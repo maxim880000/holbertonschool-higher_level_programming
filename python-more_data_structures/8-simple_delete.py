@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-# Cette ligne indique que le script doit être exécuté avec python3
 
 def simple_delete(a_dictionary, key=""):
-    # Cette fonction prend deux paramètres :
-    # a_dictionary : le dictionnaire à modifier
-    # key : la clé à supprimer (chaîne de caractères), vide par défaut
+# key : la clé à supprimer (chaîne de caractères)
 
     if key in a_dictionary:
         # Cette condition vérifie si la clé existe dans le dictionnaire

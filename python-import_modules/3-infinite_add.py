@@ -9,4 +9,4 @@ if __name__ == "__main__":
         total += int(arg)
         # On convertit chaque argument en entier et on l'ajoute au total
 
-    print(total)  # On affiche le résultat final
+    print(total)  # affiche le total
