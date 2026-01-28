@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""Définition d'une classe appelée Square (vide)
-pass sert juste à dire à Python : "il n'y a rien ici"""
-
+"""module that define an empty square class"""
 
 class Square:
+    """pass show that there is nothing in there"""
 
     pass
