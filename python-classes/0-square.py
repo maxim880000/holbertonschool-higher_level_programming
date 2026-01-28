@@ -4,4 +4,5 @@ pass sert juste à dire à Python : "il n'y a rien ici"""
 
 
 class Square:
+
     pass
