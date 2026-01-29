@@ -63,5 +63,5 @@ class Rectangle:
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
-        """Retourne une représentation officielle du rectangle utilisable avec eval()"""
+        """return a représentation du rectangle utilisable avec eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
