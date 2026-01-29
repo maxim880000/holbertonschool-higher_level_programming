@@ -9,6 +9,7 @@ __str__ permet d'afficher le rectangle avec #
 __repr__ permet d'obtenir une représentation officielle de l'objet
 """
 
+
 class Rectangle:
     """Représente un rectangle avec largeur et hauteur"""
 

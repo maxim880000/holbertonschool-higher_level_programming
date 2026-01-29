@@ -4,7 +4,9 @@ Définit une classe Rectangle avec largeur et hauteur privées
 self représente l'objet courant
 @property permet de lire un attribut privé comme s'il était public
 @<attr>.setter permet de modifier un attribut privé avec contrôle
-__width, __height attributs privés, accessibles via getter/setter.
+__width, __height attributs privés, accessibles via getter/setter
+__str__ affiche le rectangle avec #
+__repr__ permet de recréer l'objet avec eval()
 """
 
 
@@ -51,3 +53,15 @@ class Rectangle:
     def perimeter(self):
         """Retourne le périmètre du rectangle. 0 si largeur ou hauteur = 0"""
         if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """Affiche le rectangle avec le caractère #"""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+
+    def __repr__(self):
+        """Retourne une représentation officielle du rectangle utilisable avec eval()"""
+        return f"Rectangle({self.__width}, {self.__height})"

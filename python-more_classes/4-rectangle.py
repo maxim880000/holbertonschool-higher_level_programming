@@ -9,6 +9,7 @@ __str__ permet d'afficher le rectangle avec #
 __repr__ permet de recréer l'objet avec eval()
 """
 
+
 class Rectangle:
     """Représente un rectangle avec largeur et hauteur"""
 
@@ -62,5 +63,5 @@ class Rectangle:
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
-        """Retourne une représentation officielle du rectangle utilisable avec eval()"""
+        """Retourne une représentation du rectangle utilisable eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
