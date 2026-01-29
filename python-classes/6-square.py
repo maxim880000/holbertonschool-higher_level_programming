@@ -21,7 +21,8 @@ class Square:
             position (tuple): coordonnées horizontales et verticales (x, y)
 
         Raises:
-            TypeError: si size n'est pas un entier ou position n'est pas un tuple de 2 positifs
+            TypeError: si size n'est pas un entier ou
+            position n'est pas un tuple de 2 positifs
             ValueError: si size < 0
         """
         self.size = size      # utilise le setter pour valider size
@@ -43,7 +44,8 @@ class Square:
 
     @property
     def position(self):
-        """Getter : retourne la valeur actuelle de l’attribut privé __position."""
+        """Getter : retourne la valeur actuelle
+        de l’attribut privé __position."""
         return self.__position
 
     @position.setter
