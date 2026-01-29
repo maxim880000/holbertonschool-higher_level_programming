@@ -1,46 +1,53 @@
 #!/usr/bin/python3
-# This file defines a Rectangle class with area and perimeter methods
+"""
+Définit une classe Rectangle avec largeur et hauteur privées
+self représente l'objet courant
+@property permet de lire un attribut privé comme s'il était public
+@<attr>.setter permet de modifier un attribut privé avec contrôle
+__width, __height attributs privés, accessibles via getter/setter.
+"""
+
 
 class Rectangle:
-    # Initialize the Rectangle with optional width and height
-    def __init__(self, width=0, height=0):
-        self.width = width  # Set width using the property setter
-        self.height = height  # Set height using the property setter
+    """Représente un rectangle avec largeur et hauteur"""
 
-    # Getter for width
+    def __init__(self, width=0, height=0):
+        """Initialise le rectangle avec une largeur et une hauteur"""
+        self.width = width
+        self.height = height
+
     @property
     def width(self):
+        """Retourne la largeur."""
         return self.__width
 
-    # Setter for width
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):  # Check if value is integer
+        """Définit la largeur avec validation."""
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:  # Check if value is non-negative
+        if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value  # Set the private width attribute
+        self.__width = value
 
-    # Getter for height
     @property
     def height(self):
+        """Retourne la hauteur."""
         return self.__height
 
-    # Setter for height
     @height.setter
     def height(self, value):
-        if not isinstance(value, int):  # Check if value is integer
+        """Définit la hauteur avec validation."""
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:  # Check if value is non-negative
+        if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value  # Set the private height attribute
+        self.__height = value
 
-    # Method to calculate area
     def area(self):
-        return self.width * self.height  # Return area
+        """Retourne l'aire du rectangle"""
+        return self.__width * self.__height
 
-    # Method to calculate perimeter
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
-            return 0  # Perimeter is 0 if width or height is 0
-        return 2 * (self.width + self.height)  # Return perimeter
+        """Retourne le périmètre du rectangle. 0 si largeur ou hauteur = 0"""
+        if self.__width == 0 or self.__height == 0:
