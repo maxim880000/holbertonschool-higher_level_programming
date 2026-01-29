@@ -1,32 +1,32 @@
 #!/usr/bin/python3
 """
 Définit une classe Rectangle avec largeur et hauteur privées
-self représente l'objet courant
-@property permet de lire un attribut privé comme s'il était public
-@<attr>.setter permet de modifier un attribut privé avec contrôle
-__width, __height attributs privés, accessibles via getter/setter
-__str__ affiche le rectangle avec #
-__repr__ permet de recréer l'objet avec eval()
-__del__ affiche un message lors de la suppression de l'objet
+@property permet l'accès contrôlé aux attributs
+print_symbol définit le symbole d'affichage
+number_of_instances compte les instances Rectangle
 """
 
 
 class Rectangle:
     """Représente un rectangle avec largeur et hauteur"""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
-        """Initialise le rectangle avec une largeur et une hauteur"""
+        """Initialise le rectangle"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """Retourne la largeur."""
+        """Retourne la largeur"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Définit la largeur avec validation."""
+        """Définit la largeur avec validation"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -35,12 +35,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retourne la hauteur."""
+        """Retourne la hauteur"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Définit la hauteur avec validation."""
+        """Définit la hauteur avec validation"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -52,21 +52,36 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Retourne le périmètre du rectangle. 0 si largeur ou hauteur = 0"""
+        """Retourne le périmètre du rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Affiche le rectangle avec le caractère #"""
+        """Affiche le rectangle avec print_symbol"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+        symbol = str(self.print_symbol)
+        return "\n".join([symbol * self.__width
+                    for _ in range(self.__height)])
 
     def __repr__(self):
-        """Retourne une représentation du rectangle utilisable av eval()"""
+        """Retourne une représentation recréable avec eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Affiche un message lors de la suppression de l'objet"""
+        """Message lors de la suppression de l'instance"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Retourne le plus grand rectangle selon l'aire"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2

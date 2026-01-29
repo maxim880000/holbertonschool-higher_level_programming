@@ -7,17 +7,20 @@ self représente l'objet courant
 __width, __height attributs privés, accessibles via getter/setter
 __str__ affiche le rectangle avec #
 __repr__ permet de recréer l'objet avec eval()
-__del__ affiche un message lors de la suppression de l'objet
+number_of_instances compte le nombre d'instances Rectangle
 """
 
 
 class Rectangle:
     """Représente un rectangle avec largeur et hauteur"""
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initialise le rectangle avec une largeur et une hauteur"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -64,9 +67,10 @@ class Rectangle:
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
-        """Retourne une représentation du rectangle utilisable av eval()"""
+        """Retourne une représentation du rectangle utilisable avec eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Affiche un message lors de la suppression de l'objet"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

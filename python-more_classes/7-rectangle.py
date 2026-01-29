@@ -5,19 +5,22 @@ self représente l'objet courant
 @property permet de lire un attribut privé comme s'il était public
 @<attr>.setter permet de modifier un attribut privé avec contrôle
 __width, __height attributs privés, accessibles via getter/setter
-__str__ affiche le rectangle avec #
-__repr__ permet de recréer l'objet avec eval()
-__del__ affiche un message lors de la suppression de l'objet
+print_symbol définit le symbole utilisé pour l'affichage
+number_of_instances compte les instances Rectangle
 """
 
 
 class Rectangle:
     """Représente un rectangle avec largeur et hauteur"""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Initialise le rectangle avec une largeur et une hauteur"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -58,15 +61,18 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Affiche le rectangle avec le caractère #"""
+        """Affiche le rectangle avec le symbole print_symbol"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+        symbol = str(self.print_symbol)
+        return "\n".join([symbol * self.__width
+                        for _ in range(self.__height)])
 
     def __repr__(self):
-        """Retourne une représentation du rectangle utilisable av eval()"""
+        """Retourne une représentation utilisable avec eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Affiche un message lors de la suppression de l'objet"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
