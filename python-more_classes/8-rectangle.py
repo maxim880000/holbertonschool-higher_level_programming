@@ -58,12 +58,14 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Affiche le rectangle avec print_symbol"""
+        """Affiche le rectangle avec le symbole print_symbol"""
         if self.__width == 0 or self.__height == 0:
             return ""
         symbol = str(self.print_symbol)
-        return "\n".join([symbol * self.__width
-                    for _ in range(self.__height)])
+        return "\n".join([
+            symbol * self.__width
+            for _ in range(self.__height)
+        ])
 
     def __repr__(self):
         """Retourne une représentation recréable avec eval()"""
