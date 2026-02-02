@@ -1,227 +1,451 @@
-# Python - Hello, World 🐍
+# 🐍 Python - Hello, World# Python - Hello, World 🐍
 
-## Description du Projet
+
+
+![Python](https://img.shields.io/badge/Python-3.8.5-blue?style=for-the-badge&logo=python)## Description du Projet
+
+![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04_LTS-orange?style=for-the-badge&logo=ubuntu)
 
 Ce projet constitue une introduction fondamentale à la programmation Python, couvrant les concepts de base essentiels pour tout développeur Python. Il explore les mécanismes d'affichage, le formatage de chaînes de caractères, la manipulation de variables, et les techniques de slicing. Ce module est conçu pour établir une base solide en Python en abordant les principes fondamentaux du langage avec des exemples pratiques et détaillés.
 
-## Objectifs d'Apprentissage
+## 👤 Author
 
-À la fin de ce projet, vous serez capable d'expliquer les concepts suivants sans aide extérieure :
+**GitHub:** [maxim880000](https://github.com/maxim880000)## Objectifs d'Apprentissage
 
-### Concepts Généraux Python
-- **Comprendre la philosophie de Python** : Pourquoi Python est génial, simple, lisible et puissant
+
+
+---À la fin de ce projet, vous serez capable d'expliquer les concepts suivants sans aide extérieure :
+
+
+
+## 📚 Description### Concepts Généraux Python
+
+Premier projet Python à Holberton School. Introduction aux bases de Python : affichage, chaînes de caractères, formatage et manipulation de strings.- **Comprendre la philosophie de Python** : Pourquoi Python est génial, simple, lisible et puissant
+
 - **Maîtriser l'interpréteur Python** : Comment Python exécute le code ligne par ligne
-- **Utiliser le REPL** (Read-Eval-Print Loop) : L'environnement interactif Python
+
+---- **Utiliser le REPL** (Read-Eval-Print Loop) : L'environnement interactif Python
+
 - **Comprendre le shebang** (`#!/usr/bin/python3`) : Son rôle dans l'exécution de scripts
 
+## 🎯 Objectifs d'Apprentissage
+
 ### Affichage et Formatage
-- **Utiliser la fonction `print()`** : Mécanismes d'affichage en Python
+
+À la fin de ce projet, vous serez capable d'expliquer :- **Utiliser la fonction `print()`** : Mécanismes d'affichage en Python
+
 - **Maîtriser les f-strings** : Formatage moderne et élégant (Python 3.6+)
-- **Comprendre la méthode `.format()`** : Formatage de chaînes traditionnel
-- **Formater les nombres** : Précision décimale, padding, alignement
 
-### Manipulation de Chaînes
-- **Indexation de chaînes** : Accéder à des caractères spécifiques
+- Comment utiliser l'interpréteur Python- **Comprendre la méthode `.format()`** : Formatage de chaînes traditionnel
+
+- Comment imprimer du texte et des variables avec `print`- **Formater les nombres** : Précision décimale, padding, alignement
+
+- Comment utiliser les strings et l'indexation
+
+- Le style de code officiel Python (PEP 8)### Manipulation de Chaînes
+
+- Comment vérifier le code avec `pycodestyle`- **Indexation de chaînes** : Accéder à des caractères spécifiques
+
 - **Slicing** : Extraire des sous-chaînes avec la notation `[start:end:step]`
-- **Concaténation** : Assembler des chaînes de différentes manières
+
+---- **Concaténation** : Assembler des chaînes de différentes manières
+
 - **Répétition** : Multiplier des chaînes avec l'opérateur `*`
-- **Immutabilité des chaînes** : Comprendre que les chaînes ne peuvent pas être modifiées
 
-### Bonnes Pratiques
-- **Style PEP 8** : Convention de codage officielle Python
-- **Documentation** : Importance des commentaires et docstrings
-- **Caractères d'échappement** : `\n`, `\t`, `\"`, `\\`, etc.
+## 📋 Requirements- **Immutabilité des chaînes** : Comprendre que les chaînes ne peuvent pas être modifiées
 
-## Table des Matières
+
+
+| Critère | Spécification |### Bonnes Pratiques
+
+|:--------|:--------------|- **Style PEP 8** : Convention de codage officielle Python
+
+| OS | Ubuntu 20.04 LTS |- **Documentation** : Importance des commentaires et docstrings
+
+| Python | 3.8.5 |- **Caractères d'échappement** : `\n`, `\t`, `\"`, `\\`, etc.
+
+| Éditeurs | vi, vim, emacs |
+
+| Style | pycodestyle 2.7.* |## Table des Matières
+
+| Shebang | `#!/usr/bin/python3` |
 
 1. [Concepts Clés Expliqués en Détail](#concepts-clés-expliqués-en-détail)
-2. [Fichiers du Projet](#fichiers-du-projet)
+
+---2. [Fichiers du Projet](#fichiers-du-projet)
+
 3. [Commandes Importantes](#commandes-importantes)
-4. [Concepts Avancés](#concepts-avancés)
+
+## 📁 Fichiers du Projet4. [Concepts Avancés](#concepts-avancés)
+
 5. [Bonnes Pratiques](#bonnes-pratiques-détaillées)
-6. [Tests et Exécution](#tests-et-exécution)
-7. [Ressources](#ressources)
 
----
+| Fichier | Description |6. [Tests et Exécution](#tests-et-exécution)
 
-## Concepts Clés Expliqués en Détail
+|:--------|:------------|7. [Ressources](#ressources)
 
-### 1. Le Shebang (`#!/usr/bin/python3`)
+| `2-print.py` | Affiche une chaîne avec guillemets et caractère d'échappement |
 
-Le **shebang** est la première ligne d'un script Python exécutable.
+| `3-print_number.py` | Affiche un entier avec f-string |---
 
-```python
+| `4-print_float.py` | Affiche un float avec 2 décimales |
+
+| `5-print_string.py` | Affiche une string 3 fois et extrait les caractères |## Concepts Clés Expliqués en Détail
+
+| `6-concat.py` | Concaténation de strings |
+
+| `7-edges.py` | Extraction de parties d'une string (slicing) |### 1. Le Shebang (`#!/usr/bin/python3`)
+
+| `8-concat_edges.py` | Concaténation avancée avec slicing |
+
+| `9-easter_egg.py` | Affiche le Zen de Python |Le **shebang** est la première ligne d'un script Python exécutable.
+
+
+
+---```python
+
 #!/usr/bin/python3
-```
 
-**Explication détaillée** :
-- `#!` : Séquence magique qui indique au système qu'il s'agit d'un script
-- `/usr/bin/python3` : Chemin vers l'interpréteur Python 3
-- **Fonction** : Permet d'exécuter le script directement sans taper `python3` devant
-- **Utilisation** : Combiné avec `chmod +x script.py` pour rendre le script exécutable
+## 💻 Codes et Explications```
 
-**Exemple d'utilisation** :
-```bash
-# Sans shebang
-python3 mon_script.py
 
-# Avec shebang et chmod +x
+
+### 2-print.py**Explication détaillée** :
+
+```python- `#!` : Séquence magique qui indique au système qu'il s'agit d'un script
+
+#!/usr/bin/python3- `/usr/bin/python3` : Chemin vers l'interpréteur Python 3
+
+print("\"Programming is like building a multilingual puzzle")- **Fonction** : Permet d'exécuter le script directement sans taper `python3` devant
+
+```- **Utilisation** : Combiné avec `chmod +x script.py` pour rendre le script exécutable
+
+
+
+| Élément | Description |**Exemple d'utilisation** :
+
+|:--------|:------------|```bash
+
+| `#!/usr/bin/python3` | Shebang - indique l'interpréteur Python 3 |# Sans shebang
+
+| `print()` | Fonction d'affichage |python3 mon_script.py
+
+| `\"` | Caractère d'échappement pour afficher un guillemet |
+
+| `""` | Délimiteurs de chaîne de caractères |# Avec shebang et chmod +x
+
 ./mon_script.py
-```
 
-### 2. La Fonction `print()`
+---```
 
-La fonction `print()` est le mécanisme principal d'affichage en Python.
 
-**Syntaxe de base** :
+
+### 3-print_number.py### 2. La Fonction `print()`
+
 ```python
+
+#!/usr/bin/python3La fonction `print()` est le mécanisme principal d'affichage en Python.
+
+number = 98
+
+print(f"{number} Battery street")**Syntaxe de base** :
+
+``````python
+
 print(objet1, objet2, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
-```
 
-**Paramètres importants** :
-- `sep` : Séparateur entre les objets (par défaut : espace)
-- `end` : Caractère de fin (par défaut : saut de ligne `\n`)
+| Élément | Description |```
+
+|:--------|:------------|
+
+| `number = 98` | Déclaration d'une variable entière |**Paramètres importants** :
+
+| `f""` | F-string (formatted string literal) |- `sep` : Séparateur entre les objets (par défaut : espace)
+
+| `{number}` | Interpolation de variable dans la f-string |- `end` : Caractère de fin (par défaut : saut de ligne `\n`)
+
 - `file` : Destination de sortie (par défaut : sortie standard)
-- `flush` : Force l'écriture immédiate
 
-**Exemples détaillés** :
-```python
-# Affichage simple
-print("Hello")  # Hello
+---- `flush` : Force l'écriture immédiate
 
-# Plusieurs arguments
+
+
+### 4-print_float.py**Exemples détaillés** :
+
+```python```python
+
+#!/usr/bin/python3# Affichage simple
+
+number = 3.14159print("Hello")  # Hello
+
+print(f"Float: {number:.2f}")
+
+```# Plusieurs arguments
+
 print("Hello", "World")  # Hello World
 
-# Changement du séparateur
-print("A", "B", "C", sep="-")  # A-B-C
+| Élément | Description |
 
-# Changement du caractère de fin
+|:--------|:------------|# Changement du séparateur
+
+| `3.14159` | Nombre à virgule flottante (float) |print("A", "B", "C", sep="-")  # A-B-C
+
+| `:.2f` | Formatage : 2 chiffres après la virgule |
+
+| `f` | Spécifie un nombre flottant (float) |# Changement du caractère de fin
+
 print("Hello", end=" ")
-print("World")  # Hello World (sur la même ligne)
 
-# Affichage de variables
-x = 42
-print("La valeur est", x)  # La valeur est 42
+---print("World")  # Hello World (sur la même ligne)
+
+
+
+### 5-print_string.py# Affichage de variables
+
+```pythonx = 42
+
+#!/usr/bin/python3print("La valeur est", x)  # La valeur est 42
+
+str = "Holberton School"```
+
+print(str * 3)
+
+print(str[:9])### 3. Les F-Strings (Formatted String Literals)
+
 ```
-
-### 3. Les F-Strings (Formatted String Literals)
 
 Les **f-strings** sont la méthode moderne de formatage introduite dans Python 3.6.
 
-**Syntaxe** :
-```python
-f"texte {variable} texte {expression}"
-```
+| Élément | Description |
 
-**Avantages** :
+|:--------|:------------|**Syntaxe** :
+
+| `str * 3` | Répétition de la chaîne 3 fois |```python
+
+| `str[:9]` | Slicing : caractères de l'index 0 à 8 |f"texte {variable} texte {expression}"
+
+| `[:]` | Notation de slice [début:fin] |```
+
+
+
+---**Avantages** :
+
 - ✅ Plus lisible que `.format()`
-- ✅ Plus rapide en exécution
-- ✅ Permet d'évaluer des expressions directement
-- ✅ Syntaxe concise et intuitive
 
-**Exemples détaillés** :
-```python
-# Variables simples
-name = "Alice"
+### 6-concat.py- ✅ Plus rapide en exécution
+
+```python- ✅ Permet d'évaluer des expressions directement
+
+#!/usr/bin/python3- ✅ Syntaxe concise et intuitive
+
+str1 = "Holberton"
+
+str2 = "School"**Exemples détaillés** :
+
+str1 = str1 + " " + str2```python
+
+print(f"Welcome to {str1}!")# Variables simples
+
+```name = "Alice"
+
 age = 25
-print(f"Je m'appelle {name} et j'ai {age} ans")
-# Output: Je m'appelle Alice et j'ai 25 ans
 
-# Expressions
-x = 10
+| Élément | Description |print(f"Je m'appelle {name} et j'ai {age} ans")
+
+|:--------|:------------|# Output: Je m'appelle Alice et j'ai 25 ans
+
+| `+` | Opérateur de concaténation de strings |
+
+| `" "` | Espace comme chaîne |# Expressions
+
+| `f"..."` | F-string pour l'affichage formaté |x = 10
+
 y = 20
-print(f"La somme est {x + y}")
+
+---print(f"La somme est {x + y}")
+
 # Output: La somme est 30
 
-# Formatage de nombres
-pi = 3.14159
-print(f"Pi vaut environ {pi:.2f}")
-# Output: Pi vaut environ 3.14
+### 7-edges.py
 
-# Padding et alignement
-num = 42
-print(f"Nombre: {num:05d}")  # Remplit avec des zéros
-# Output: Nombre: 00042
+```python# Formatage de nombres
+
+#!/usr/bin/python3pi = 3.14159
+
+word = "Holberton"print(f"Pi vaut environ {pi:.2f}")
+
+word_first_3 = word[:3]# Output: Pi vaut environ 3.14
+
+word_last_2 = word[-2:]
+
+middle_word = word[1:-1]# Padding et alignement
+
+print(f"First 3 letters: {word_first_3}")num = 42
+
+print(f"Last 2 letters: {word_last_2}")print(f"Nombre: {num:05d}")  # Remplit avec des zéros
+
+print(f"Middle word: {middle_word}")# Output: Nombre: 00042
+
+```
 
 # Alignement
-print(f"|{'gauche':<10}|")  # Aligné à gauche
-# Output: |gauche    |
-print(f"|{'centre':^10}|")  # Centré
-# Output: |  centre  |
-print(f"|{'droite':>10}|")  # Aligné à droite
-# Output: |    droite|
+
+| Élément | Description |print(f"|{'gauche':<10}|")  # Aligné à gauche
+
+|:--------|:------------|# Output: |gauche    |
+
+| `word[:3]` | Premiers 3 caractères (index 0, 1, 2) |print(f"|{'centre':^10}|")  # Centré
+
+| `word[-2:]` | Derniers 2 caractères (index -2, -1) |# Output: |  centre  |
+
+| `word[1:-1]` | Du 2ème au dernier exclu |print(f"|{'droite':>10}|")  # Aligné à droite
+
+| `-1` | Index négatif = depuis la fin |# Output: |    droite|
+
 ```
+
+---
 
 ### 4. La Méthode `.format()`
 
-Méthode traditionnelle de formatage avant les f-strings.
+### 8-concat_edges.py
 
-**Syntaxe** :
-```python
-"texte {} texte {}".format(valeur1, valeur2)
+```pythonMéthode traditionnelle de formatage avant les f-strings.
+
+#!/usr/bin/python3
+
+str = "Python is an interpreted, interactive, object-oriented programming\**Syntaxe** :
+
+ language that combines remarkable power with very clear syntax"```python
+
+str = str[39:67] + str[107:112] + str[0:6]"texte {} texte {}".format(valeur1, valeur2)
+
+print(str)```
+
 ```
 
 **Exemples** :
-```python
-# Positionnels simples
-print("{} + {} = {}".format(1, 2, 3))
-# Output: 1 + 2 = 3
+
+| Élément | Description |```python
+
+|:--------|:------------|# Positionnels simples
+
+| `\` | Continuation de ligne |print("{} + {} = {}".format(1, 2, 3))
+
+| `str[39:67]` | Extraction d'une portion de la chaîne |# Output: 1 + 2 = 3
+
+| `+` | Concaténation de plusieurs extraits |
 
 # Avec indices
-print("{0} {1} {0}".format("Hello", "World"))
+
+---print("{0} {1} {0}".format("Hello", "World"))
+
 # Output: Hello World Hello
 
-# Avec noms
-print("{name} a {age} ans".format(name="Bob", age=30))
-# Output: Bob a 30 ans
+### 9-easter_egg.py
+
+```python# Avec noms
+
+#!/usr/bin/python3print("{name} a {age} ans".format(name="Bob", age=30))
+
+import this# Output: Bob a 30 ans
+
+```
 
 # Formatage de nombres
-print("Prix: {:.2f}€".format(19.99))
-# Output: Prix: 19.99€
-```
+
+| Élément | Description |print("Prix: {:.2f}€".format(19.99))
+
+|:--------|:------------|# Output: Prix: 19.99€
+
+| `import` | Mot-clé pour importer un module |```
+
+| `this` | Module spécial affichant le Zen de Python |
 
 ### 5. Indexation et Slicing de Chaînes
 
+---
+
 Les chaînes en Python sont des **séquences indexables**.
+
+## 📊 Tableau Récapitulatif des Concepts
 
 #### Indexation
 
-**Règles** :
-- Les indices commencent à **0**
-- Les indices négatifs comptent depuis la fin (**-1** = dernier caractère)
+| Concept | Syntaxe | Exemple |
 
-```python
-texte = "Python"
-#        012345  (indices positifs)
-#       -6-5-4-3-2-1  (indices négatifs)
+|:--------|:--------|:--------|**Règles** :
 
-print(texte[0])   # 'P' (premier caractère)
-print(texte[5])   # 'n' (sixième caractère)
+| **Print** | `print(valeur)` | `print("Hello")` |- Les indices commencent à **0**
+
+| **F-string** | `f"{variable}"` | `f"Valeur: {x}"` |- Les indices négatifs comptent depuis la fin (**-1** = dernier caractère)
+
+| **Formatage float** | `{var:.nf}` | `{pi:.2f}` → `3.14` |
+
+| **Concaténation** | `str1 + str2` | `"Hel" + "lo"` → `"Hello"` |```python
+
+| **Répétition** | `str * n` | `"ab" * 3` → `"ababab"` |texte = "Python"
+
+| **Slicing début** | `str[:n]` | `"Hello"[:2]` → `"He"` |#        012345  (indices positifs)
+
+| **Slicing fin** | `str[-n:]` | `"Hello"[-2:]` → `"lo"` |#       -6-5-4-3-2-1  (indices négatifs)
+
+| **Slicing milieu** | `str[a:b]` | `"Hello"[1:4]` → `"ell"` |
+
+| **Import** | `import module` | `import this` |print(texte[0])   # 'P' (premier caractère)
+
+| **Échappement** | `\"` `\\` `\n` | `"\"coucou\""` |print(texte[5])   # 'n' (sixième caractère)
+
 print(texte[-1])  # 'n' (dernier caractère)
-print(texte[-6])  # 'P' (premier caractère via indice négatif)
+
+---print(texte[-6])  # 'P' (premier caractère via indice négatif)
+
 ```
+
+## 🔑 Points Clés à Retenir
 
 #### Slicing (Découpage)
 
-**Syntaxe complète** :
-```python
-chaine[start:end:step]
-```
+1. **Shebang** : Toujours commencer par `#!/usr/bin/python3`
 
-- `start` : Indice de départ (inclus)
+2. **F-strings** : Méthode moderne et lisible pour formater les chaînes**Syntaxe complète** :
+
+3. **Slicing** : `[début:fin:pas]` - fin est exclusif```python
+
+4. **Index négatifs** : `-1` = dernier élément, `-2` = avant-dernierchaine[start:end:step]
+
+5. **Concaténation** : Utiliser `+` pour joindre des chaînes```
+
+
+
+---- `start` : Indice de départ (inclus)
+
 - `end` : Indice de fin (EXCLU)
-- `step` : Pas (optionnel, défaut = 1)
 
-**Exemples détaillés** :
-```python
-texte = "Holberton"
-#        012345678
+## 📖 Ressources- `step` : Pas (optionnel, défaut = 1)
 
-# Slicing de base
+
+
+- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)**Exemples détaillés** :
+
+- [Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html)```python
+
+- [Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)texte = "Holberton"
+
+- [An Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html)#        012345678
+
+- [How To Use String Formatters in Python 3](https://realpython.com/python-f-strings/)
+
+- [Pycodestyle – Style Guide for Python Code](https://pypi.org/project/pycodestyle/)# Slicing de base
+
 print(texte[0:3])    # 'Hol' (indices 0, 1, 2)
-print(texte[:3])     # 'Hol' (début implicite à 0)
+
+---print(texte[:3])     # 'Hol' (début implicite à 0)
+
 print(texte[3:])     # 'berton' (fin implicite à la fin)
-print(texte[:])      # 'Holberton' (copie complète)
+
+<p align="center">Made with ❤️ at Holberton School</p>print(texte[:])      # 'Holberton' (copie complète)
+
 
 # Indices négatifs
 print(texte[-2:])    # 'on' (deux derniers caractères)
