@@ -1,0 +1,80 @@
+Test de la classe MyList
+========================
+
+Import de la classe
+>>> MyList = __import__('1-my_list').MyList
+
+Test basique avec des entier positif
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+Vérifier que la list originale n'a pas changer
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+Test avec une liste vide
+>>> my_list2 = MyList()
+>>> my_list2.print_sorted()
+[]
+
+Test avec des nombres négatifs
+>>> my_list3 = MyList()
+>>> my_list3.append(-1)
+>>> my_list3.append(-5)
+>>> my_list3.append(-2)
+>>> my_list3.print_sorted()
+[-5, -2, -1]
+
+Test avec un seul élément
+>>> my_list4 = MyList()
+>>> my_list4.append(42)
+>>> my_list4.print_sorted()
+[42]
+
+Test avec des nombres mélangés (positifs et négatifs)
+>>> my_list5 = MyList()
+>>> my_list5.append(5)
+>>> my_list5.append(-3)
+>>> my_list5.append(0)
+>>> my_list5.append(10)
+>>> my_list5.append(-1)
+>>> my_list5.print_sorted()
+[-3, -1, 0, 5, 10]
+
+Test avec des doublons
+>>> my_list6 = MyList()
+>>> my_list6.append(3)
+>>> my_list6.append(3)
+>>> my_list6.append(1)
+>>> my_list6.append(3)
+>>> my_list6.print_sorted()
+[1, 3, 3, 3]
+
+Test que MyList hérite bien de list
+>>> my_list7 = MyList()
+>>> isinstance(my_list7, list)
+True
+
+Test avec des nombres déjà triés
+>>> my_list8 = MyList()
+>>> my_list8.append(1)
+>>> my_list8.append(2)
+>>> my_list8.append(3)
+>>> my_list8.print_sorted()
+[1, 2, 3]
+
+Test avec des nombres triés en ordre décroissant
+>>> my_list9 = MyList()
+>>> my_list9.append(5)
+>>> my_list9.append(4)
+>>> my_list9.append(3)
+>>> my_list9.append(2)
+>>> my_list9.append(1)
+>>> my_list9.print_sorted()
+[1, 2, 3, 4, 5]

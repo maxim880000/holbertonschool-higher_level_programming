@@ -1,0 +1,91 @@
+Test de la classe BaseGeometry
+===============================
+
+Import de la classe
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+Test de la méthode area() - doit lever une exception
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+Test integer_validator avec un entier positif valide
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
+Test avec une string - doit lever TypeError
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+Test avec 0 - doit lever ValueError
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
+
+Test avec un nombre négatif - doit lever ValueError
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
+
+Test avec un booléen True - doit lever TypeError
+>>> bg.integer_validator("test", True)
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec un booléen False - doit lever TypeError
+>>> bg.integer_validator("test", False)
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec None - doit lever TypeError
+>>> bg.integer_validator("test", None)
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec un float - doit lever TypeError
+>>> bg.integer_validator("test", 3.14)
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec une liste - doit lever TypeError
+>>> bg.integer_validator("test", [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec un tuple - doit lever TypeError
+>>> bg.integer_validator("test", (1, 2))
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec un dictionnaire - doit lever TypeError
+>>> bg.integer_validator("test", {"key": "value"})
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+Test avec un set - doit lever TypeError
+>>> bg.integer_validator("test", {1, 2, 3})
+Traceback (mostrecent call last):
+...
+TypeError: test must be an integer
+
+Test avec un nombre négatif très grand
+>>> bg.integer_validator("big_negative", -999999)
+Traceback (most recent call last):
+...
+ValueError: big_negative must be greater than 0
+
+
