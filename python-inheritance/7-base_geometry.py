@@ -9,7 +9,7 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Valide qu'une valeur est un entier positif mais pas un 
+        """Valide qu'une valeur est un entier positif mais pas un
         booléen(car bool hérite de int en Python)"""
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("{} must be an integer".format(name))
