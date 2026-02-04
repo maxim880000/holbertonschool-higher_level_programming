@@ -88,4 +88,13 @@ Traceback (most recent call last):
 ...
 ValueError: big_negative must be greater than 0
 
+Test avec un très grand entier positif
+>>> bg.integer_validator("big_number", 999999999)
+
+Test sans arguments pour integer_validator
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
 
