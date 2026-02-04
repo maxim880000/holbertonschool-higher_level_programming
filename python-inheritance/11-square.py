@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 """
-Module qui définit la classe Square héritant de Rectangle avec affichage spécifique.
+Module qui définit la classe Square héritant
+de Rectangle avec affichage spécifique.
 """
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     Classe Square qui hérite de Rectangle.
-    Permet de représenter un carré avec une taille donnée et un affichage spécifique.
+    Permet de représenter un carré avec une
+    taille donnée et un affichage spécifique.
     """
     def __init__(self, size):
         """

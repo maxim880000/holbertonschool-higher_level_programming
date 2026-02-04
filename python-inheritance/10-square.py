@@ -5,6 +5,7 @@ Module qui définit la classe Square héritant de Rectangle.
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     Classe Square qui hérite de Rectangle.
