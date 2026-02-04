@@ -97,4 +97,14 @@ Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+Test avec un seul argument
+>>> bg.integer_validator("test")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+Test avec trop d'argument
+>>> bg.integer_validator("test", 5, 10)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
