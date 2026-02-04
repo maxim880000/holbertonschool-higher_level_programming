@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Defines a function that checks if an object
+is an instance of, or inherits from, a given class
+"""
+
 
 def is_kind_of_class(obj, a_class):
     """returns True if the object is an instance of, or if the object

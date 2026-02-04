@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Defines a function that checks if
+an object inherits from a given class
+"""
+
 
 def inherits_from(obj, a_class):
     """return True if the object is an instance
