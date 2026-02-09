@@ -1,0 +1,37 @@
+1
+"r"Read (lire)Lit le fichier - mode par défaut
+"w"Write (écrire)Écrit dans le fichier (ecrase tout et ecrit si le fichier existe sinon il le creer)
+"a"Append (ajouter)Ajoute à la fin sans effacer
+
+2
+Ça veut dire quoi "dumps" ?
+dump = déverser/vider
+s = string (chaîne)
+dumps = "transforme en chaîne JSON" 
+
+json.dumps(c que tu vuex transformer )
+json.dumps()Python → JSON[1,2,3] → "[1, 2, 3]"
+
+3
+Différences Python ↔ JSON
+Python         JSON (texte)
+True           true (minuscule)
+False          false
+None           null
+'      Guillemets doubles "
+
+4
+json.loads(c que tu veux transformer)
+json.loads()JSON → Python"[1, 2, 3]" → [1,2,3]
+
+5
+json.dumps(obj)         Convertit en string     Retourne du texte
+json.dump(obj, file)    Convertit ET écrit      Écrit dans un fichier
+
+6
+json.dump(my_obj, file)
+          ↑       ↑
+       QUOI    OÙ
+
+1er paramètre = QUOI convertir (l'objet)
+2ème paramètre = OÙ écrire (le fichier ouvert)
