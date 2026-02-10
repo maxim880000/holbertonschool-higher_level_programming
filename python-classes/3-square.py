@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""Module qui définit une classe Square représentant un carré"""
-"""raise stop le programme en signalant un problème précis"""
 
 
 class Square:
@@ -18,10 +16,12 @@ class Square:
         if size < 0:
             raise ValueError("size must be >=0")
 
-        """Attribut privé qui stocke la taille du carré"""
+        # self est l'objet courant, __size est un attribut privé de cet objet
+        # Il stocke la taille du carré
         self.__size = size
 
     def area(self):
-        """Méthode qui calcule et retourne l’aire du carré"""
+        """Méthode qui calcule et retourne l’aire du carré
+        prends l’attribut de l’objet courant"""
         return self.__size * self.__size
         """Aire = côté * côté"""

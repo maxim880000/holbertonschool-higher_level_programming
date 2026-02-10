@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """
-Définit une classe Rectangle avec largeur et hauteur privées
-self représente l'objet courant
 @property permet de lire un attribut privé comme s'il était public
 @<attr>.setter permet de modifier un attribut privé avec contrôle
 __width, __height attributs privés, accessibles via getter/setter
