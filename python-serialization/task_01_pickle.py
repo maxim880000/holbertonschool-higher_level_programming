@@ -13,6 +13,7 @@ class CustomObject:
     et un indicateur si c'est un étudiant.
     """
 
+
     def __init__(self, name, age, is_student):
         """Initialise une instance de CustomObject.
 
@@ -25,11 +26,13 @@ class CustomObject:
         self.age = age
         self.is_student = is_student
 
+
     def display(self):
         """Affiche les attributs de l'objet au format lisible."""
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
+
 
     def serialize(self, filename):
         """Sérialise l'objet et l'enregistre dans un fichier.
