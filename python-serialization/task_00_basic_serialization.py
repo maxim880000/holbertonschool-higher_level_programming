@@ -17,9 +17,9 @@ def serialize_and_save_to_file(data, filename):
     """
     # Ouverture du fichier en mode écriture ('w') avec encodage UTF-8.
     # Si le fichier existe déjà, il sera remplacé.
-    with open(filename, 'w', encoding='utf-8') as f:
+    with open(filename, 'w', encoding='utf-8') as file:
         # json.dump() convertit le dictionnaire en JSON et écrit directement dans le fichier
-        json.dump(data, f)
+        json.dump(data, file)
 
 
 def load_and_deserialize(filename):
@@ -32,6 +32,6 @@ def load_and_deserialize(filename):
         dict: Dictionnaire Python désérialisé depuis le fichier JSON.
     """
     # Ouverture du fichier en mode lecture ('r') avec encodage UTF-8
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, 'r', encoding='utf-8') as file:
         # json.load() lit le contenu JSON du fichier et le convertit en dictionnaire Python
-        return json.load(f)
+        return json.load(file)

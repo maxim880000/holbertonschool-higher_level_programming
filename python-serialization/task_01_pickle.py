@@ -38,8 +38,9 @@ class CustomObject:
             filename (str): Nom du fichier dans lequel sauvegarder l'objet.
         """
         try:
-            with open(filename, 'wb') as f:  # Ouverture du fichier en binaire pour écriture
-                pickle.dump(self, f)  # Sauvegarde l'objet dans le fichier
+            with open(filename, 'wb') as file:
+                # Ouverture du fichier en binaire pour écriture
+                pickle.dump(self, file)  # Sauvegarde l'objet dans le fichier
         except (OSError, pickle.PicklingError) as e:
             print(f"Erreur lors de la sérialisation: {e}")
 
@@ -55,8 +56,9 @@ class CustomObject:
             ou None si une erreur se produit.
         """
         try:
-            with open(filename, 'rb') as f:  # Ouverture du fichier en binaire pour lecture
-                return pickle.load(f)  # Charge l'objet depuis le fichier
+            with open(filename, 'rb') as file:
+                # Ouverture du fichier en binaire pour lecture
+                return pickle.load(file)  # Charge l'objet depuis le fichier
         except (OSError, pickle.UnpicklingError) as e:
             print(f"Erreur lors de la désérialisation: {e}")
             return None
