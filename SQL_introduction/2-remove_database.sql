@@ -1,2 +1,2 @@
--- deletes the database hbtn_0c_0 in your MySQL
-DELETE hbtn_0c_0 IF EXISTS
+-- supprime la base de données hbtn_0c_0 si elle existe
+DROP DATABASE IF EXISTS hbtn_0c_0;
