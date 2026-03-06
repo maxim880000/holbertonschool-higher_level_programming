@@ -2,7 +2,7 @@
 """
 Module pour rechercher un état par nom (VERSION NON SÉCURISÉE).
 
-⚠️ ATTENTION : Ce script est vulnérable aux injections SQL !
+Ce script est vulnérable aux injections SQL !
 Il utilise .format() pour insérer directement l'input utilisateur
 dans la requête SQL, ce qui permet des attaques malveillantes.
 
@@ -19,7 +19,7 @@ def filter_by_user_input(username, password, database, state_name):
     """
     Recherche un état par nom en utilisant l'input utilisateur.
 
-    ⚠️ VULNÉRABILITÉ : Cette fonction utilise .format() pour construire
+    Cette fonction utilise .format() pour construire
     la requête SQL. Un utilisateur malveillant peut injecter du code SQL
     arbitraire dans le paramètre state_name.
 
@@ -36,7 +36,7 @@ def filter_by_user_input(username, password, database, state_name):
         Si state_name = "Texas" : OK, requête normale
         Si state_name = "x'; DROP TABLE states; --" : DANGER !
         La requête devient : SELECT * FROM states WHERE name = 'x';
-                             DROP TABLE states; --'
+                            DROP TABLE states; --'
         
         Cela exécute deux commandes :
         1. SELECT... (normal)
@@ -54,7 +54,7 @@ def filter_by_user_input(username, password, database, state_name):
 
     cursor = db.cursor()
 
-    # ⚠️ LIGNE DANGEREUSE : Construction de la requête avec .format()
+    # LIGNE DANGEREUSE : Construction de la requête avec .format()
     # L'input utilisateur est directement inséré dans la chaîne SQL
     # sans aucune validation ou échappement des caractères spéciaux
     query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(

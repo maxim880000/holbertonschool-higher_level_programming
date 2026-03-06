@@ -2,7 +2,7 @@
 """
 Module pour rechercher un état par nom (VERSION SÉCURISÉE).
 
-✅ Ce script utilise les requêtes paramétrées pour se protéger
+Ce script utilise les requêtes paramétrées pour se protéger
 contre les injections SQL. L'input utilisateur est traité comme
 une valeur, jamais comme du code SQL exécutable.
 """
@@ -15,7 +15,7 @@ def safe_filter_by_input(username, password, database, state_name):
     """
     Recherche un état par nom de manière sécurisée.
 
-    ✅ SÉCURISÉ : Cette fonction utilise des paramètres (%s) au lieu de
+    SÉCURISÉ : Cette fonction utilise des paramètres (%s) au lieu de
     .format() pour construire la requête. MySQLdb échappe automatiquement
     les caractères spéciaux, empêchant les injections SQL.
 
@@ -57,7 +57,7 @@ def safe_filter_by_input(username, password, database, state_name):
 
     cursor = db.cursor()
 
-    # ✅ LIGNE SÉCURISÉE : Utilisation de paramètres avec %s
+    # LIGNE SÉCURISÉE : Utilisation de paramètres avec %s
     # La requête contient un placeholder %s au lieu de la valeur directe
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
 
