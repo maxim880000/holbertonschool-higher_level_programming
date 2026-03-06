@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Prints the first State object from the database using SQLAlchemy ORM."""
+"""Lists all State objects containing the letter 'a' using SQLAlchemy ORM."""
 
 import sys
 from sqlalchemy import create_engine
@@ -7,8 +7,8 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-def fetch_first_state(username, password, database):
-    """Connect to MySQL and print the first state ordered by id."""
+def filter_states_with_a(username, password, database):
+    """Connect to MySQL and print states whose name contains 'a'."""
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(
             username, password, database),
@@ -20,12 +20,12 @@ def fetch_first_state(username, password, database):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # .first() → LIMIT 1 en SQL, retourne None si la table est vide
-    state = session.query(State).order_by(State.id).first()
+    # .filter() → WHERE en SQL  |  State.name.like('%a%') → LIKE '%a%'
+    states = session.query(State).filter(
+        State.name.like('%a%')
+    ).order_by(State.id).all()
 
-    if state is None:
-        print("Nothing")
-    else:
+    for state in states:
         print("{}: {}".format(state.id, state.name))
 
     session.close()
@@ -33,4 +33,4 @@ def fetch_first_state(username, password, database):
 
 if __name__ == "__main__":
     # sys.argv[1]=user  [2]=password  [3]=database
-    fetch_first_state(sys.argv[1], sys.argv[2], sys.argv[3])
+    filter_states_with_a(sys.argv[1], sys.argv[2], sys.argv[3])
